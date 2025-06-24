@@ -76,7 +76,7 @@ async function run() {
       res.send(result)
     })
 
-    app.get("/application/job/:id", async (req, res)=>{
+    app.get("/application/job/:job_id", async (req, res)=>{
       const job_id = req.params.job_id;
       const query = {jobId : job_id}
       const result = await applicationCollection.find(query)
